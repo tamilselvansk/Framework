@@ -1,6 +1,7 @@
 package com.ivymobility.utility;
 
 import java.io.FileInputStream;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +11,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Base {
 
@@ -19,6 +23,7 @@ public class Base {
 	public static WebDriver driver = null;
 	public static boolean isinitialized = false;
 	public static boolean isBrowserOpened = false;
+	public static WebDriverWait wait = null;
 
 	public static void initialize() throws Exception
 
@@ -26,6 +31,7 @@ public class Base {
 		if (!isinitialized) {
 
 			// -----------------Initialize logs------------------
+
 			APP_LOGS = Logger.getLogger("devpinoyLogger");
 			// System.setProperty("org.apache.commons.logging.Log",
 			// "org.apache.commons.logging.impl.Jdk14Logger");
@@ -74,6 +80,25 @@ public class Base {
 			String waitTime = CONFIG.getProperty("default_implicitlyWait");
 			driver.manage().timeouts().implicitlyWait(Long.parseLong(waitTime), TimeUnit.SECONDS);
 		}
+	}
+
+	public void waitCondition(int timeout, WebElement element) {
+
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
+	}
+
+	public void selectFromMultielement(List<WebElement> elements, String textvalue) {
+		for (WebElement element : elements) {
+			if (element.getText().equals(textvalue))
+				waitCondition(20, element);
+			element.click();
+		}
+
+	}
+
+	public void mouseMovement(WebElement element) {
+		Actions action = new Actions(driver);
+		action.moveToElement(element).click().build().perform();
 	}
 
 	public void branchLogin() {

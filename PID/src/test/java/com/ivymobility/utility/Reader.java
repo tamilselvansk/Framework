@@ -91,9 +91,18 @@ public class Reader {
 			// else if(cell.getCellType()==Cell.CELL_TYPE_NUMERIC ||
 			// cell.getCellType()==Cell.CELL_TYPE_FORMULA ){
 			else if (cell.getCellTypeEnum() == CellType.NUMERIC) {
+							
+				if(String.valueOf(cell.getNumericCellValue()).contains("E"))
+				{
+					long numeric=(long) cell.getNumericCellValue();
+					String cellText = String.valueOf(numeric);
+					return cellText;
+				}
+				else {
 				String cellText = String.valueOf(cell.getNumericCellValue());
-
 				return cellText;
+				}
+				
 			} else if (cell.getCellTypeEnum() == CellType.BLANK)
 				return "";
 			else

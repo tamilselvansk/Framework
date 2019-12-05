@@ -1,6 +1,7 @@
 package com.ivymobility.testcases;
 
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,20 +20,26 @@ public class GRN_Creation extends Base {
 		
 	}
 	@Test(dataProvider="getTestData")
-	public void GRN_Creat(String PO, String Warehouse,String SKU,String CaseQty,String PieceQty) throws InterruptedException
+	public void GRN_Creatio(String PO, String Warehouse,String SKU,String CaseQty,String PieceQty) throws InterruptedException
 	{
 		GRN_Page GC=PageFactory.initElements(driver,GRN_Page.class);
-		GC.GRN_Creation_Page(PO, Warehouse, SKU , CaseQty ,PieceQty);
+		GC.GRN_Creation_Page(PO, Warehouse,SKU,CaseQty ,PieceQty);
 		
 		
 	}
 	@DataProvider(name="getTestData")
 	public Object[][] getTestData()
 	{
-		return TestUtil.getdata(dataxls,"GRN_Creation");
+		return TestUtil.getdata(dataxls,this.getClass().getSimpleName());
 			
 	}
 	
+	
+	@AfterClass
+	public void tearDown()
+	{
+		driver.quit();
+	}
 	
 	
                       
