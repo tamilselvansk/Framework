@@ -1,6 +1,8 @@
 package com.ivymobility.utility;
 
 import java.io.FileInputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -14,6 +16,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class Base {
 
@@ -100,6 +103,68 @@ public class Base {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).click().build().perform();
 	}
+
+	public void commonSendKeys(WebElement element, String data) {
+
+		if (element == null) {
+			APP_LOGS.error("Element not found for sending data to text field");
+			Assert.fail("Element value is null");
+		}
+
+		else {
+			try {
+				if (element.isDisplayed()) {
+					element.sendKeys(data);
+
+					APP_LOGS.info(" data send sucessfully on WebElement:::" + element);
+				} else {
+					APP_LOGS.error("Unable to do   data send to the WebElement::::" + element);
+					Assert.fail("The Element is not available in the WebPage:::::" + element);
+				}
+			} catch (Exception e) {
+				APP_LOGS.error("Error-", e);
+				StringWriter sw = new StringWriter();
+				e.printStackTrace(new PrintWriter(sw));
+				String exceptionAsString = sw.toString();
+				Assert.fail(exceptionAsString);
+			}
+		}
+
+	}
+	public static void commonClick(WebElement element) 
+	{
+
+		try{
+if(element==null)
+{
+	APP_LOGS.error("Element not found for Common click");
+	Assert.fail("Element value is null");
+}
+
+
+else {
+	if(element.isDisplayed())
+	{
+		element.click();
+	
+			APP_LOGS.info(" click done on WebElement:::"+element);
+	}
+	else
+	{
+		APP_LOGS.error("Unable to do  click on the WebElement::::"+ element);
+		Assert.fail("The Element is not available in the WebPage:::::"+element);
+	}
+}
+}catch(Exception e)
+{
+APP_LOGS.error("Error-",e);
+StringWriter sw = new StringWriter();
+e.printStackTrace(new PrintWriter(sw));
+String exceptionAsString = sw.toString();
+Assert.fail(exceptionAsString);	
+}	
+	}
+	
 
 	public void branchLogin() {
 

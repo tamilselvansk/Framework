@@ -1,0 +1,18 @@
+12/05/2019 17:41:37 DEBUG devpinoyLogger:39 - Loading Properties files
+12/05/2019 17:41:37 DEBUG devpinoyLogger:44 - Loaded Properties files successfully
+12/05/2019 17:41:37 DEBUG devpinoyLogger:45 - Loading All Excel files.....
+12/05/2019 17:41:37 DEBUG devpinoyLogger:47 - Loaded All Excel files successfully
+12/05/2019 17:41:49 INFO  devpinoyLogger:104 - Entered  the Username Successfully
+12/05/2019 17:41:49 INFO  devpinoyLogger:111 - Entered  the Username Successfully
+12/05/2019 17:41:50 INFO  devpinoyLogger:118 - Clicked Login button Successfully
+12/05/2019 17:41:52 INFO  devpinoyLogger:46 - GRN Management Clicked successfully
+12/05/2019 17:41:52 INFO  devpinoyLogger:48 - GRNAcceptance Clicked successfully
+12/05/2019 17:41:52 INFO  devpinoyLogger:50 - Switched the frame successfully
+12/05/2019 17:41:52 INFO  devpinoyLogger:52 - GRN From Date clicked successfully
+12/05/2019 17:41:53 INFO  devpinoyLogger:59 - GRN From Date selected successfully
+12/05/2019 17:41:53 INFO  devpinoyLogger:64 - PONumber Entered successfully
+12/05/2019 17:41:53 INFO  devpinoyLogger:66 - Search Clicked successfully
+12/05/2019 17:41:53 INFO  devpinoyLogger:68 - GRN selected successfully
+12/05/2019 17:41:54 INFO  devpinoyLogger:70 - ReceiveGRN Clicked successfully
+12/05/2019 17:41:55 INFO  devpinoyLogger:73 - AcceptGRN Clicked successfully
+12/05/2019 17:41:55 INFO  devpinoyLogger:75 - Confirmation Clicked successfully
