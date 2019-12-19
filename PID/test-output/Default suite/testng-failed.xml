@@ -6,7 +6,6 @@
       <class name="com.ivymobility.testcases.SalesOrder_Create">
         <methods>
           <include name="dataSetup"/>
-          <include name="tearDown"/>
           <include name="SalesOrder" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.ivymobility.testcases.SalesOrder_Create -->

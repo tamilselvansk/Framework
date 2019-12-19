@@ -20,10 +20,10 @@ public class GRN_Creation extends Base {
 		
 	}
 	@Test(dataProvider="getTestData")
-	public void GRN_Creatio(String PO, String Warehouse,String SKU,String CaseQty,String PieceQty) throws InterruptedException
+	public void GRN_Creatio(String PO, String Warehouse,String Deliveryaddress,String SKU,String CaseQty,String PieceQty) throws Exception
 	{
 		GRN_Page GC=PageFactory.initElements(driver,GRN_Page.class);
-		GC.GRN_Creation_Page(PO, Warehouse,SKU,CaseQty ,PieceQty);
+		GC.GRN_Creation_Page(PO, Warehouse,Deliveryaddress,SKU,CaseQty ,PieceQty);
 		
 		
 	}

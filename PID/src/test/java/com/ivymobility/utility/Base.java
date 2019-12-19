@@ -8,6 +8,8 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +38,7 @@ public class Base {
 			// -----------------Initialize logs------------------
 
 			APP_LOGS = Logger.getLogger("devpinoyLogger");
+			// PropertyConfigurator.configure("log4j.properties");
 			// System.setProperty("org.apache.commons.logging.Log",
 			// "org.apache.commons.logging.impl.Jdk14Logger");
 
@@ -58,9 +61,11 @@ public class Base {
 
 	public void openBrowser() throws InterruptedException {
 		if (!isBrowserOpened) {
+			
+			String browsername=CONFIG.getProperty("browserType");
 			if (CONFIG.getProperty("browserType").equalsIgnoreCase("firefox")) {
-				// FirefoxProfile fp = new FirefoxProfile();
-				// fp.setPreference("webdriver.load.strategy", "unstable");
+				System.setProperty("webdriver.gecko.driver",
+						"C:\\Users\\tamilselvan.sk\\MvnProject\\PID\\Driver\\geckodriver.exe");
 
 				driver = new FirefoxDriver();
 
@@ -85,86 +90,41 @@ public class Base {
 		}
 	}
 
-	public void waitCondition(int timeout, WebElement element) {
+	public void elementToBeClickable(WebDriver driver, int timeout, WebElement element) {
 
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 	}
 
-	public void selectFromMultielement(List<WebElement> elements, String textvalue) {
-		for (WebElement element : elements) {
-			if (element.getText().equals(textvalue))
-				waitCondition(20, element);
-			element.click();
-		}
+	public void visibilityOfAllElements(WebDriver driver, int timeout, List<WebElement> element) {
 
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfAllElements(element));
 	}
 
+	public void visibilityOf(WebDriver driver, int timeout, WebElement element) {
+
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
+	}
+
+	public void selectFromMultielement(WebDriver driver, List<WebElement> elements, String textvalue) {
+		if (elements == null) {
+			APP_LOGS.error("Element not found for selectFromMultielement");
+			Assert.fail("Element value is null");
+		}
+		else {
+		for (WebElement element : elements) {
+			String value = element.getText();
+			if (value.contains(textvalue)) {
+				//elementToBeClickable(driver, 30, element);
+				Functions.commonClick(element);
+				break;
+			}
+		}
+	}
+	}
 	public void mouseMovement(WebElement element) {
 		Actions action = new Actions(driver);
 		action.moveToElement(element).click().build().perform();
 	}
-
-	public void commonSendKeys(WebElement element, String data) {
-
-		if (element == null) {
-			APP_LOGS.error("Element not found for sending data to text field");
-			Assert.fail("Element value is null");
-		}
-
-		else {
-			try {
-				if (element.isDisplayed()) {
-					element.sendKeys(data);
-
-					APP_LOGS.info(" data send sucessfully on WebElement:::" + element);
-				} else {
-					APP_LOGS.error("Unable to do   data send to the WebElement::::" + element);
-					Assert.fail("The Element is not available in the WebPage:::::" + element);
-				}
-			} catch (Exception e) {
-				APP_LOGS.error("Error-", e);
-				StringWriter sw = new StringWriter();
-				e.printStackTrace(new PrintWriter(sw));
-				String exceptionAsString = sw.toString();
-				Assert.fail(exceptionAsString);
-			}
-		}
-
-	}
-	public static void commonClick(WebElement element) 
-	{
-
-		try{
-if(element==null)
-{
-	APP_LOGS.error("Element not found for Common click");
-	Assert.fail("Element value is null");
-}
-
-
-else {
-	if(element.isDisplayed())
-	{
-		element.click();
-	
-			APP_LOGS.info(" click done on WebElement:::"+element);
-	}
-	else
-	{
-		APP_LOGS.error("Unable to do  click on the WebElement::::"+ element);
-		Assert.fail("The Element is not available in the WebPage:::::"+element);
-	}
-}
-}catch(Exception e)
-{
-APP_LOGS.error("Error-",e);
-StringWriter sw = new StringWriter();
-e.printStackTrace(new PrintWriter(sw));
-String exceptionAsString = sw.toString();
-Assert.fail(exceptionAsString);	
-}	
-	}
-	
 
 	public void branchLogin() {
 

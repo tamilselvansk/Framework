@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\tamilselvan.sk\AppData\Local\Temp\testng-eclipse--328368320\testng-customsuite.xml</span>
+                    <span>C:\Users\tamilselvan.sk\AppData\Local\Temp\testng-eclipse-1002294181\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ivymobility.testcases.SalesOrder_Create" hash-for-method="SalesOrder(TTPRE, 32082010022019000000, WH2, WH2, 3456.0)">SalesOrder(TTPRE, 32082010022019000000, WH2, WH2, 3456.0)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.ivymobility.testcases.SalesOrder_Create" hash-for-method="SalesOrder(TTTPRE, 0004, WH2, 21035621)">SalesOrder(TTTPRE, 0004, WH2, 21035621)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -125,37 +125,15 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="SalesOrder(TTPRE, 32082010022019000000, WH2, WH2, 3456.0)">
-                  </a> <!-- SalesOrder(TTPRE, 32082010022019000000, WH2, WH2, 3456.0) -->
+                  <a name="SalesOrder(TTTPRE, 0004, WH2, 21035621)">
+                  </a> <!-- SalesOrder(TTTPRE, 0004, WH2, 21035621) -->
                   <span class="method-name">SalesOrder</span>
-                  <span class="parameters">(TTPRE, 32082010022019000000, WH2, WH2, 3456.0)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;form-control&quot; data-val=&quot;true&quot; data-val-regex=&quot;[Sales Person] Please enter valid input.&quot; data-val-regex-pattern=&quot;[^@!&amp;quot;&gt;&lt;]+$&quot; data-val-required=&quot;Sales Person is mandatory.&quot; id=&quot;SalesPerson&quot; name=&quot;SalesPerson&quot; placeholder=&quot;Sales Person&quot; type=&quot;text&quot; value=&quot;&quot;&gt; is not clickable at point (574, 65). Other element would receive the click: &lt;div class=&quot;loader-section&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=78.0.3904.108)
-Build info: version: &apos;3.141.5&apos;, revision: &apos;d54ebd709a&apos;, time: &apos;2018-11-06T11:42:16&apos;
-System info: host: &apos;LT-1305&apos;, ip: &apos;192.168.43.172&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.105 (60e2d8774a81..., userDataDir: C:\Users\TAMILS~1.SK\AppDat...}, goog:chromeOptions: {debuggerAddress: localhost:59413}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 8d89f46133b37734e19540fd831cbf45
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy10.click(Unknown Source)
-	at com.ivymobility.pages.SalesOrder_Create_Page.OrderCreate(SalesOrder_Create_Page.java:53)
-	at com.ivymobility.testcases.SalesOrder_Create.SalesOrder(SalesOrder_Create.java:28)
+                  <span class="parameters">(TTTPRE, 0004, WH2, 21035621)</span>
+                  <div class="stack-trace">java.lang.AssertionError: The Element is not available in the WebPage:::::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -&gt; id: SalesPerson]
+	at org.testng.Assert.fail(Assert.java:94)
+	at com.ivymobility.utility.Functions.commonClick(Functions.java:58)
+	at com.ivymobility.pages.SalesOrder_Create_Page.OrderCreate(SalesOrder_Create_Page.java:56)
+	at com.ivymobility.testcases.SalesOrder_Create.SalesOrder(SalesOrder_Create.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -190,7 +168,7 @@ Session ID: 8d89f46133b37734e19540fd831cbf45
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\tamilselvan.sk\AppData\Local\Temp\testng-eclipse--328368320\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\tamilselvan.sk\AppData\Local\Temp\testng-eclipse-1002294181\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -243,12 +221,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'SalesOrder')
 data.setCell(0, 2, 'com.ivymobility.testcases.SalesOrder_Create')
-data.setCell(0, 3, 4142);
+data.setCell(0, 3, 972);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <span class="suite-total-time">Total running time: 972 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -282,13 +260,9 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">SalesOrder(TTPRE, 32082010022019000000, WH2, WH2, 3456.0)</span>
-                <span class="method-start">31635 ms</span>
+                <span class="method-name">SalesOrder(TTTPRE, 0004, WH2, 21035621)</span>
+                <span class="method-start">26841 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">35783 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

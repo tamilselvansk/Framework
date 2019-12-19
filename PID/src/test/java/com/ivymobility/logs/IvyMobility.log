@@ -1,18 +1,13 @@
-12/05/2019 17:41:37 DEBUG devpinoyLogger:39 - Loading Properties files
-12/05/2019 17:41:37 DEBUG devpinoyLogger:44 - Loaded Properties files successfully
-12/05/2019 17:41:37 DEBUG devpinoyLogger:45 - Loading All Excel files.....
-12/05/2019 17:41:37 DEBUG devpinoyLogger:47 - Loaded All Excel files successfully
-12/05/2019 17:41:49 INFO  devpinoyLogger:104 - Entered  the Username Successfully
-12/05/2019 17:41:49 INFO  devpinoyLogger:111 - Entered  the Username Successfully
-12/05/2019 17:41:50 INFO  devpinoyLogger:118 - Clicked Login button Successfully
-12/05/2019 17:41:52 INFO  devpinoyLogger:46 - GRN Management Clicked successfully
-12/05/2019 17:41:52 INFO  devpinoyLogger:48 - GRNAcceptance Clicked successfully
-12/05/2019 17:41:52 INFO  devpinoyLogger:50 - Switched the frame successfully
-12/05/2019 17:41:52 INFO  devpinoyLogger:52 - GRN From Date clicked successfully
-12/05/2019 17:41:53 INFO  devpinoyLogger:59 - GRN From Date selected successfully
-12/05/2019 17:41:53 INFO  devpinoyLogger:64 - PONumber Entered successfully
-12/05/2019 17:41:53 INFO  devpinoyLogger:66 - Search Clicked successfully
-12/05/2019 17:41:53 INFO  devpinoyLogger:68 - GRN selected successfully
-12/05/2019 17:41:54 INFO  devpinoyLogger:70 - ReceiveGRN Clicked successfully
-12/05/2019 17:41:55 INFO  devpinoyLogger:73 - AcceptGRN Clicked successfully
-12/05/2019 17:41:55 INFO  devpinoyLogger:75 - Confirmation Clicked successfully
+12/19/2019 10:36:36 DEBUG devpinoyLogger:47 - Loading Properties files
+12/19/2019 10:36:36 DEBUG devpinoyLogger:52 - Loaded Properties files successfully
+12/19/2019 10:36:36 DEBUG devpinoyLogger:53 - Loading All Excel files.....
+12/19/2019 10:36:36 DEBUG devpinoyLogger:55 - Loaded All Excel files successfully
+12/19/2019 10:36:55 INFO  devpinoyLogger:134 - Entered  the Username Successfully
+12/19/2019 10:36:55 INFO  devpinoyLogger:141 - Entered  the Username Successfully
+12/19/2019 10:37:03 INFO  devpinoyLogger:148 - Clicked Login button Successfully
+12/19/2019 10:37:03 INFO  devpinoyLogger:82 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> xpath: //a[@title='Sales Order Management']]
+12/19/2019 10:37:03 INFO  devpinoyLogger:49 - Sales Order Management clicked successfully
+12/19/2019 10:37:03 INFO  devpinoyLogger:55 -  click done on WebElement:::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> xpath: //a[@title='Sales Order Management']/following-sibling::div//a[@title='Sales Order Create']]
+12/19/2019 10:37:03 INFO  devpinoyLogger:52 - SalesOrderCreate clicked successfully
+12/19/2019 10:37:03 INFO  devpinoyLogger:54 - Frame switched successfully
+12/19/2019 10:37:04 ERROR devpinoyLogger:57 - Unable to do  click on the WebElement::::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> id: SalesPerson]

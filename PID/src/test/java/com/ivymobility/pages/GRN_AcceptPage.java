@@ -6,8 +6,10 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
 
 import com.ivymobility.utility.Base;
+import com.ivymobility.utility.Functions;
 
 public class GRN_AcceptPage extends Base {
 
@@ -41,10 +43,10 @@ public class GRN_AcceptPage extends Base {
 
 	public void GRNAcceptance(String POnumber, String Day) throws Exception {
 
-		Thread.sleep(1000);
-		GRNManagement.click();
+		//Thread.sleep(1000);
+		Functions.safeJavaScriptClick(GRNManagement);
 		APP_LOGS.info("GRN Management Clicked successfully");
-		GRNAcceptance.click();
+		Functions.safeJavaScriptClick(GRNAcceptance);
 		APP_LOGS.info("GRNAcceptance Clicked successfully");
 		driver.switchTo().frame(frame);
 		APP_LOGS.info("Switched the frame successfully");
@@ -62,16 +64,18 @@ public class GRN_AcceptPage extends Base {
 		}
 		PO_no.sendKeys(POnumber);
 		APP_LOGS.info("PONumber Entered successfully");
-		Search.click();
+		Functions.safeJavaScriptClick(Search);
 		APP_LOGS.info("Search Clicked successfully");
-		selectFromMultielement(GRNselection, POnumber);
+		selectFromMultielement(driver,GRNselection, POnumber);
 		APP_LOGS.info("GRN selected successfully");
-		ReceiveGRN.click();
-		APP_LOGS.info("ReceiveGRN Clicked successfully");
-		Thread.sleep(1000);
-		AcceptGRN.click();
+		Functions.safeJavaScriptClick(ReceiveGRN);
+		APP_LOGS.info("ReceiveGRN Clicked successfully");	
+		visibilityOf(driver,20, AcceptGRN);
+		Functions.safeJavaScriptClick(AcceptGRN);
 		APP_LOGS.info("AcceptGRN Clicked successfully");
+		visibilityOf(driver,30, Confirmation);
 		Confirmation.click();
+		Assert.assertTrue(true);
 		APP_LOGS.info("Confirmation Clicked successfully");
 
 	}

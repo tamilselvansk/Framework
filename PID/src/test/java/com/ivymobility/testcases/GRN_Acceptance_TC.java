@@ -32,10 +32,10 @@ public class GRN_Acceptance_TC extends Base {
 		return TestUtil.getdata(dataxls, this.getClass().getSimpleName());
 
 	}
-
-	@AfterClass
-	public void tearDown() {
-		driver.quit();
-	}
+//
+//	@AfterClass
+//	public void tearDown() {
+//		driver.quit();
+//	}
 
 }
