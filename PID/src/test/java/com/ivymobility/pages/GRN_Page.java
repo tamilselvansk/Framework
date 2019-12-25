@@ -74,11 +74,11 @@ public class GRN_Page extends Base{
 
 		APP_LOGS.info("Warehouse Clicked successfully");
 
-		  visibilityOfAllElements(driver, 30, WarehouseSelection);
-	      selectFromMultielement(driver,WarehouseSelection,Warehouse);
+		Functions.visibilityOfAllElements(30, WarehouseSelection);
+		Functions.selectFromMultielements(WarehouseSelection,Warehouse);
 	      Functions.commonClick(deliveryaddress);
 	      
-	      selectFromMultielement(driver,deliveryaddresSelection,Deliveryaddress);
+	      Functions.selectFromMultielements(deliveryaddresSelection,Deliveryaddress);
 				SKUSearch.sendKeys(SKU);
 				
 				Functions.commonClick(SKUSelection);

@@ -2,8 +2,6 @@ package com.ivymobility.pages;
 
 import java.util.List;
 
-import org.openqa.selenium.JavascriptException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -32,50 +30,89 @@ public class SalesOrder_Create_Page extends Base {
 	WebElement Warehouse;
 	@FindBy(xpath = "//select[@id='OH_AW_Id']/following-sibling::div//li")
 	List<WebElement> Warehouseselection;
-	@FindBy(id="SearchName")
+	@FindBy(id = "SearchName")
 	WebElement SearchName;
-	@FindBy(xpath="//ul[@id='ui-id-9']/li/a")
+	@FindBy(xpath = "//ul[@id='ui-id-3']/li/a")
 	WebElement SKUSelection;
+	@FindBy(xpath="//span[text()='Case : ']/following-sibling::input")
+	WebElement ORD_Case;
+	@FindBy(xpath="//span[text()='Piece : ']/following-sibling::input")
+	WebElement Piece;
+	@FindBy(xpath="//a[text()='Submit Order']")
+	WebElement SubmitOrder;
+	@FindBy(xpath="//button[text()='Yes Continue']")
+	WebElement Confirmation;
 	
 	public SalesOrder_Create_Page(WebDriver driver) {
 		Base.driver = driver;
 
 	}
 
-	public void OrderCreate(String SalesPerson, String Retail, String Whouse, String sku)
-			throws Exception {
-	    
-		Functions.safeJavaScriptClick(SalesOrderManagement);		
+	public void OrderCreate(String SalesPerson, String Retail, String Whouse, String sku,String Case) throws Exception {
+
+		Functions.safeJavaScriptClick(SalesOrderManagement);
 		APP_LOGS.info("Sales Order Management clicked successfully");
-		elementToBeClickable(driver, 10, SalesOrderCreate);
-	    Functions.commonClick(SalesOrderCreate);
+		Functions.elementToBeClickable(10, SalesOrderCreate);
+		Functions.commonClick(SalesOrderCreate);
 		APP_LOGS.info("SalesOrderCreate clicked successfully");
 		driver.switchTo().frame(frame);
 		APP_LOGS.info("Frame switched successfully");
-		//SalesPersion.sendKeys(Keys.SPACE);
+//		Sales Person
+		Functions.visibilityOf(20, SalesPersion);
 		Functions.commonClick(SalesPersion);
-		visibilityOf(driver, 30, SalesPersion);
+		Functions.visibilityOf(20, SalesPersion);
 		Functions.safeJavaScriptSendkeys(SalesPersion, SalesPerson);
-        APP_LOGS.info("SalesPerson entered successfully");
-       // visibilityOf(driver, 10, SalesPersion);
-        SalesPersion.sendKeys(Keys.DELETE);
-        //APP_LOGS.info("SalesPerson data deleted successfully");        
-	    selectFromMultielement(driver,SalesPersonSelection,SalesPerson);
-	    APP_LOGS.info("Sales person selected successfully");
-	    visibilityOf(driver, 20, Retailer);
-	    Functions.commonClick(Retailer);
-	    visibilityOf(driver, 30, Retailer);
-		Functions.safeJavaScriptSendkeys(Retailer,Retail);
+		APP_LOGS.info("SalesPerson entered successfully");
+		SalesPersion.sendKeys(Keys.DELETE);
+		Functions.visibilityOfAllElements(20, SalesPersonSelection);
+		Functions.selectFromMultielements(SalesPersonSelection, SalesPerson);
+		APP_LOGS.info("Sales person selected successfully");
+		
+//		Retailer Selection
+		Functions.elementToBeClickable(30, Retailer);
+		Functions.mouseMovement(Retailer);
+		Functions.visibilityOf(30, Retailer);
+		Functions.safeJavaScriptSendkeys(Retailer, Retail);
 		APP_LOGS.info("Retailer entered successfully");
-//		elementToBeClickable(driver, 40, Retailer);
+		
 		Retailer.sendKeys(Keys.DELETE);
-//		APP_LOGS.info("Retailer deleted successfully");
-		selectFromMultielement(driver,RetailerSelection,Retail);
-       APP_LOGS.info("Retailer selected successfully");		
-//		Warehouse.click();
-//		selectFromMultielement(driver,Warehouseselection, Whouse);		
-//		Functions.safeJavaScriptSendkeys(SearchName, sku);
-//		Functions.commonClick(SKUSelection);
+		Functions.visibilityOfAllElements(30, RetailerSelection);
+		Functions.selectFromMultielements(RetailerSelection, Retail);
+		APP_LOGS.info("Retailer selected successfully");
+
+//      WareHouse Selection		
+		Functions.elementToBeClickable(25, Warehouse);
+		Functions.mouseMovement(Warehouse);
+		Functions.visibilityOfAllElements(20, Warehouseselection);
+		Functions.selectFromMultielements(Warehouseselection, Whouse);
+		APP_LOGS.info("Warehoue selected successfully");
+		
+//		SKU Selection
+		Functions.visibilityOf(30, SearchName);
+		Functions.safeJavaScriptSendkeys(SearchName, sku);
+		APP_LOGS.info("SKU entered successfully ");
+		Functions.visibilityOf(30, SearchName);
+		SearchName.sendKeys(Keys.DELETE);
+		Functions.elementToBeClickable(25, SKUSelection);
+		Functions.commonClick(SKUSelection);
+		APP_LOGS.info("SKU Selected successfully");
+		
+//		Ordered Data
+		Functions.elementToBeClickable(25, ORD_Case);
+		Functions.commonClick(ORD_Case);
+		int case_qty=(int) Double.parseDouble(Case);
+		Functions.commonSendKeys(ORD_Case,String.valueOf(case_qty));
+		ORD_Case.sendKeys(Keys.TAB);
+		Piece.sendKeys(Keys.TAB);
+		
+		Functions.scrollBy();
+		
+		Functions.elementToBeClickable(40,SubmitOrder);
+	    Functions.commonClick(SubmitOrder);
+	    
+		Functions.elementToBeClickable(30,Confirmation);
+		Functions.commonClick(Confirmation);
+		
 	}
 
 }

@@ -66,14 +66,14 @@ public class GRN_AcceptPage extends Base {
 		APP_LOGS.info("PONumber Entered successfully");
 		Functions.safeJavaScriptClick(Search);
 		APP_LOGS.info("Search Clicked successfully");
-		selectFromMultielement(driver,GRNselection, POnumber);
+		Functions.selectFromMultielements(GRNselection, POnumber);
 		APP_LOGS.info("GRN selected successfully");
 		Functions.safeJavaScriptClick(ReceiveGRN);
 		APP_LOGS.info("ReceiveGRN Clicked successfully");	
-		visibilityOf(driver,20, AcceptGRN);
+		Functions.visibilityOf(20, AcceptGRN);
 		Functions.safeJavaScriptClick(AcceptGRN);
 		APP_LOGS.info("AcceptGRN Clicked successfully");
-		visibilityOf(driver,30, Confirmation);
+		Functions.visibilityOf(30, Confirmation);
 		Confirmation.click();
 		Assert.assertTrue(true);
 		APP_LOGS.info("Confirmation Clicked successfully");

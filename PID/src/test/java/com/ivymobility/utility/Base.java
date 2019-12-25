@@ -90,42 +90,6 @@ public class Base {
 		}
 	}
 
-	public void elementToBeClickable(WebDriver driver, int timeout, WebElement element) {
-
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
-	}
-
-	public void visibilityOfAllElements(WebDriver driver, int timeout, List<WebElement> element) {
-
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOfAllElements(element));
-	}
-
-	public void visibilityOf(WebDriver driver, int timeout, WebElement element) {
-
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
-	}
-
-	public void selectFromMultielement(WebDriver driver, List<WebElement> elements, String textvalue) {
-		if (elements == null) {
-			APP_LOGS.error("Element not found for selectFromMultielement");
-			Assert.fail("Element value is null");
-		}
-		else {
-		for (WebElement element : elements) {
-			String value = element.getText();
-			if (value.contains(textvalue)) {
-				//elementToBeClickable(driver, 30, element);
-				Functions.commonClick(element);
-				break;
-			}
-		}
-	}
-	}
-	public void mouseMovement(WebElement element) {
-		Actions action = new Actions(driver);
-		action.moveToElement(element).click().build().perform();
-	}
-
 	public void branchLogin() {
 
 		WebElement Username_element = driver.findElement(By.id("UserName"));

@@ -1,13 +1,33 @@
-12/19/2019 10:36:36 DEBUG devpinoyLogger:47 - Loading Properties files
-12/19/2019 10:36:36 DEBUG devpinoyLogger:52 - Loaded Properties files successfully
-12/19/2019 10:36:36 DEBUG devpinoyLogger:53 - Loading All Excel files.....
-12/19/2019 10:36:36 DEBUG devpinoyLogger:55 - Loaded All Excel files successfully
-12/19/2019 10:36:55 INFO  devpinoyLogger:134 - Entered  the Username Successfully
-12/19/2019 10:36:55 INFO  devpinoyLogger:141 - Entered  the Username Successfully
-12/19/2019 10:37:03 INFO  devpinoyLogger:148 - Clicked Login button Successfully
-12/19/2019 10:37:03 INFO  devpinoyLogger:82 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> xpath: //a[@title='Sales Order Management']]
-12/19/2019 10:37:03 INFO  devpinoyLogger:49 - Sales Order Management clicked successfully
-12/19/2019 10:37:03 INFO  devpinoyLogger:55 -  click done on WebElement:::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> xpath: //a[@title='Sales Order Management']/following-sibling::div//a[@title='Sales Order Create']]
-12/19/2019 10:37:03 INFO  devpinoyLogger:52 - SalesOrderCreate clicked successfully
-12/19/2019 10:37:03 INFO  devpinoyLogger:54 - Frame switched successfully
-12/19/2019 10:37:04 ERROR devpinoyLogger:57 - Unable to do  click on the WebElement::::[[ChromeDriver: chrome on XP (fcb6d4d4619901865ac907771b777940)] -> id: SalesPerson]
+12/25/2019 10:28:57 DEBUG devpinoyLogger:47 - Loading Properties files
+12/25/2019 10:28:57 DEBUG devpinoyLogger:52 - Loaded Properties files successfully
+12/25/2019 10:28:57 DEBUG devpinoyLogger:53 - Loading All Excel files.....
+12/25/2019 10:28:58 DEBUG devpinoyLogger:55 - Loaded All Excel files successfully
+12/25/2019 10:29:11 INFO  devpinoyLogger:98 - Entered  the Username Successfully
+12/25/2019 10:29:11 INFO  devpinoyLogger:105 - Entered  the Username Successfully
+12/25/2019 10:29:12 INFO  devpinoyLogger:112 - Clicked Login button Successfully
+12/25/2019 10:29:13 INFO  devpinoyLogger:76 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //a[@title='Sales Order Management']]
+12/25/2019 10:29:13 INFO  devpinoyLogger:54 - Sales Order Management clicked successfully
+12/25/2019 10:29:13 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //a[@title='Sales Order Management']/following-sibling::div//a[@title='Sales Order Create']]
+12/25/2019 10:29:13 INFO  devpinoyLogger:57 - SalesOrderCreate clicked successfully
+12/25/2019 10:29:14 INFO  devpinoyLogger:59 - Frame switched successfully
+12/25/2019 10:29:14 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> id: SalesPerson]
+12/25/2019 10:29:14 INFO  devpinoyLogger:94 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> id: SalesPerson]
+12/25/2019 10:29:15 INFO  devpinoyLogger:65 - SalesPerson entered successfully
+12/25/2019 10:29:15 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //ul[@id='ui-id-1']/li/a]
+12/25/2019 10:29:15 INFO  devpinoyLogger:69 - Sales person selected successfully
+12/25/2019 10:29:16 INFO  devpinoyLogger:162 - Element is move and clicked successfully
+12/25/2019 10:29:16 INFO  devpinoyLogger:94 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> id: Retailer]
+12/25/2019 10:29:16 INFO  devpinoyLogger:76 - Retailer entered successfully
+12/25/2019 10:29:17 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //ul[@id='ui-id-5']/li/a]
+12/25/2019 10:29:17 INFO  devpinoyLogger:81 - Retailer selected successfully
+12/25/2019 10:29:17 INFO  devpinoyLogger:162 - Element is move and clicked successfully
+12/25/2019 10:29:18 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //select[@id='OH_AW_Id']/following-sibling::div//li]
+12/25/2019 10:29:18 INFO  devpinoyLogger:88 - Warehoue selected successfully
+12/25/2019 10:29:18 INFO  devpinoyLogger:94 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> id: SearchName]
+12/25/2019 10:29:18 INFO  devpinoyLogger:93 - SKU entered successfully 
+12/25/2019 10:29:19 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //ul[@id='ui-id-3']/li/a]
+12/25/2019 10:29:19 INFO  devpinoyLogger:98 - SKU Selected successfully
+12/25/2019 10:29:19 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //span[text()='Case : ']/following-sibling::input]
+12/25/2019 10:29:20 INFO  devpinoyLogger:30 -  data send sucessfully on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //span[text()='Case : ']/following-sibling::input]
+12/25/2019 10:29:20 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //a[text()='Submit Order']]
+12/25/2019 10:29:21 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (3a11769527f12df918b56e154784b07b)] -> xpath: //button[text()='Yes Continue']]

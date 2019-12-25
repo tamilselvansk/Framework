@@ -1,4 +1,14 @@
-12/19/2019 10:21:12 DEBUG devpinoyLogger:47 - Loading Properties files
-12/19/2019 10:21:12 DEBUG devpinoyLogger:52 - Loaded Properties files successfully
-12/19/2019 10:21:12 DEBUG devpinoyLogger:53 - Loading All Excel files.....
-12/19/2019 10:21:12 DEBUG devpinoyLogger:55 - Loaded All Excel files successfully
+12/24/2019 17:10:25 DEBUG devpinoyLogger:47 - Loading Properties files
+12/24/2019 17:10:25 DEBUG devpinoyLogger:52 - Loaded Properties files successfully
+12/24/2019 17:10:25 DEBUG devpinoyLogger:53 - Loading All Excel files.....
+12/24/2019 17:10:26 DEBUG devpinoyLogger:55 - Loaded All Excel files successfully
+12/24/2019 17:10:37 INFO  devpinoyLogger:98 - Entered  the Username Successfully
+12/24/2019 17:10:37 INFO  devpinoyLogger:105 - Entered  the Username Successfully
+12/24/2019 17:10:38 INFO  devpinoyLogger:112 - Clicked Login button Successfully
+12/24/2019 17:10:38 INFO  devpinoyLogger:76 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> xpath: //a[@title='Sales Order Management']]
+12/24/2019 17:10:39 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> xpath: //a[@title='Sales Order Management']/following-sibling::div//a[@title='Sales Order Create']]
+12/24/2019 17:10:39 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> id: SalesPerson]
+12/24/2019 17:10:39 INFO  devpinoyLogger:94 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> id: SalesPerson]
+12/24/2019 17:10:40 INFO  devpinoyLogger:58 -  click done on WebElement:::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> xpath: //ul[@id='ui-id-1']/li/a]
+12/24/2019 17:10:40 INFO  devpinoyLogger:162 - Element is move and clicked successfully
+12/24/2019 17:10:41 INFO  devpinoyLogger:94 - Clicking on element with using java script click::::[[ChromeDriver: chrome on XP (74d9169ab0c9e1d4848dc3ecbb17f558)] -> id: Retailer]
