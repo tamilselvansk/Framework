@@ -5,10 +5,13 @@ import java.util.List;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import com.ivymobility.utility.Base;
 import com.ivymobility.utility.Functions;
+
+import junit.framework.Assert;
 
 public class SalesOrder_Create_Page extends Base {
 
@@ -38,6 +41,8 @@ public class SalesOrder_Create_Page extends Base {
 	WebElement ORD_Case;
 	@FindBy(xpath="//span[text()='Piece : ']/following-sibling::input")
 	WebElement Piece;
+	@FindBy(xpath="//span[text()='Total Amount : ']/parent::td")
+	WebElement TotalAmount;
 	@FindBy(xpath="//a[text()='Submit Order']")
 	WebElement SubmitOrder;
 	@FindBy(xpath="//button[text()='Yes Continue']")
@@ -48,7 +53,7 @@ public class SalesOrder_Create_Page extends Base {
 
 	}
 
-	public void OrderCreate(String SalesPerson, String Retail, String Whouse, String sku,String Case) throws Exception {
+	public void OrderCreate(String SalesPerson, String Retail, String Whouse, String sku,String Case,String CCqty,String piece,String price,String TotalAmt) throws Exception {
 
 		Functions.safeJavaScriptClick(SalesOrderManagement);
 		APP_LOGS.info("Sales Order Management clicked successfully");
@@ -69,13 +74,13 @@ public class SalesOrder_Create_Page extends Base {
 		APP_LOGS.info("Sales person selected successfully");
 		
 //		Retailer Selection
-		Functions.elementToBeClickable(30, Retailer);
+			Functions.elementToBeClickable(30, Retailer);
 		Functions.mouseMovement(Retailer);
 		Functions.visibilityOf(30, Retailer);
 		Functions.safeJavaScriptSendkeys(Retailer, Retail);
 		APP_LOGS.info("Retailer entered successfully");
 		
-		Retailer.sendKeys(Keys.DELETE);
+		Retailer.sendKeys(Keys.SPACE);
 		Functions.visibilityOfAllElements(30, RetailerSelection);
 		Functions.selectFromMultielements(RetailerSelection, Retail);
 		APP_LOGS.info("Retailer selected successfully");
@@ -103,11 +108,22 @@ public class SalesOrder_Create_Page extends Base {
 		int case_qty=(int) Double.parseDouble(Case);
 		Functions.commonSendKeys(ORD_Case,String.valueOf(case_qty));
 		ORD_Case.sendKeys(Keys.TAB);
+		//Functions.commonSendKeys(ORD_Case,String.valueOf(case_qty));
 		Piece.sendKeys(Keys.TAB);
-		
-		Functions.scrollBy();
+		String tt=TotalAmount.getText();
+		String bb = currencyformat(TotalAmt);
+		if(TotalAmount.getText().equalsIgnoreCase(currencyformat(TotalAmt)))
+		{
+			Assert.assertTrue(true);	
+		}else {
+			APP_LOGS.info("Total amount is mismatched");
+			Assert.assertTrue(false);
+		}
+		//Functions.scrollBy();
 		
 		Functions.elementToBeClickable(40,SubmitOrder);
+		Actions a = new Actions(driver);
+		a.moveByOffset(100, 100).perform();
 	    Functions.commonClick(SubmitOrder);
 	    
 		Functions.elementToBeClickable(30,Confirmation);
