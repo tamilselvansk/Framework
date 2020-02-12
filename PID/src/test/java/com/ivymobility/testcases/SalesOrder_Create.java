@@ -21,10 +21,10 @@ public class SalesOrder_Create extends Base {
 		
 	}
 	@Test(dataProvider="getTestData")
-	public void SalesOrder(String SalesPerson, String Retail, String Whouse, String Sku, String Case) throws Exception
+	public void SalesOrder(String SalesPerson, String Retail, String Whouse, String Sku, String Case,String CCqty,String piece,String price,String TotalAmt) throws Exception
 	{
 		SalesOrder_Create_Page OC = PageFactory.initElements(driver,SalesOrder_Create_Page.class);
-		OC.OrderCreate(SalesPerson, Retail, Whouse, Sku, Case );
+		OC.OrderCreate(SalesPerson, Retail, Whouse, Sku, Case ,CCqty,piece,price,TotalAmt);
 		
 		
 	}
